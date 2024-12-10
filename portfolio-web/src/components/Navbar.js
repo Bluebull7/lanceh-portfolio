@@ -1,5 +1,7 @@
 import React from "react";
 import { AppBar, Toolbar, Typography, Button } from "@mui/material";
+import { Link } from "react-router-dom";
+import routes from "../routes";
 
 const Navbar = () => {
   return (
@@ -8,12 +10,11 @@ const Navbar = () => {
         <Typography variant="h6" sx={{ flexGrow: 1 }}>
           Lance Henry
         </Typography>
-        <Button color="inherit">Home</Button>
-        <Button color="inherit">About</Button>
-        <Button color="inherit">Portfolio</Button>
-        <Button color="inherit">Blog</Button>
-        <Button color="inherit">HexaCode</Button>
-        <Button color="inherit">Contact</Button>
+        {Object.values(routes).map((route) => (
+          <Button key={route.path} color="inherit" component={Link} to={route.path}>
+            {route.name}
+          </Button>
+        ))}
       </Toolbar>
     </AppBar>
   );
