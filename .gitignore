@@ -128,3 +128,31 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+# Cache files
+.cache/
+dist/
+.tmp/
+.vscode/
+.DS_Store
+
+# OS generated files
+Thumbs.db
+Desktop.ini
+
+# IDE files
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Coverage reports
+coverage/
+
+# Debug files
+*.stackdump
+
+# Miscellaneous
+*.env
+*.local
+*.sublime-project
+*.sublime-workspace
